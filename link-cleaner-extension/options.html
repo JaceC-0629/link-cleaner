@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <title>设置</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      margin: 0;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: #f1f5f9;
+      font-family: system-ui, sans-serif;
+      color: #0f172a;
+    }
+    main {
+      width: min(92vw, 480px);
+      background: #fff;
+      border-radius: 8px;
+      padding: 24px;
+      box-shadow: 0 10px 30px rgba(15, 23, 42, 0.08);
+    }
+    h1 {
+      margin: 0 0 18px;
+      font-size: 18px;
+    }
+    label {
+      display: block;
+      margin-bottom: 8px;
+      font-size: 13px;
+      color: #475569;
+    }
+    .row {
+      display: flex;
+      gap: 8px;
+    }
+    input {
+      flex: 1;
+      min-width: 0;
+      height: 36px;
+      padding: 0 10px;
+      border: 1px solid #cbd5e1;
+      border-radius: 8px;
+      font-size: 14px;
+      outline: none;
+    }
+    input:focus {
+      border-color: #16a34a;
+    }
+    button {
+      height: 36px;
+      padding: 0 14px;
+      border: 0;
+      border-radius: 8px;
+      background: #16a34a;
+      color: #fff;
+      font-size: 14px;
+      cursor: pointer;
+    }
+    button.secondary {
+      background: #f1f5f9;
+      color: #334155;
+    }
+    ul {
+      margin: 18px 0 0;
+      padding: 0;
+      list-style: none;
+    }
+    li {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 8px;
+      padding: 8px 0;
+      border-top: 1px solid #e2e8f0;
+      font-size: 14px;
+    }
+    li span {
+      word-break: break-all;
+    }
+    .empty {
+      justify-content: center;
+      color: #94a3b8;
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>设置</h1>
+    <label for="word-input">干扰词</label>
+    <div class="row">
+      <input id="word-input" type="text" placeholder="例如：防吞" maxlength="30">
+      <button id="add-btn" type="button">添加</button>
+    </div>
+    <ul id="word-list"></ul>
+  </main>
+  <script src="options.js"></script>
+</body>
+</html>
